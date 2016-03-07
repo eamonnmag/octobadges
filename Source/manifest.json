@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Github Org BADGES",
+  "version": "0.1",
+  "description": "Adds travis, pypi, coveralls, and license badges to org repo lists.",
+  "icons": {
+    "128": "img/github_badge.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "lib/zepto.min.js",
+        "script.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
