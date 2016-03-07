@@ -1,8 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Github Org BADGES",
+  "name": "OctoBadges",
+  "shortname": "OctoBadges",
   "version": "0.1",
-  "description": "Adds travis, pypi, coveralls, and license badges to org repo lists.",
+  "description": "Adds travis, pypi, coveralls, and license badges to Github organisation lists.",
   "icons": {
     "128": "img/github_badge.png"
   },
