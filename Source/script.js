@@ -19,6 +19,7 @@ var badges = {
         "url": "https://github.com{repo}/blob/master/LICENSE.txt"
     },
     "pypi": {
+        "test": {"selector": ".repo-list-stats span", "is": ["Python"]},
         "badge": "https://img.shields.io/pypi/dm/{repo_name}.svg",
         "url": "https://pypi.python.org/pypi/{repo_name}/"
     }
@@ -31,6 +32,22 @@ $.each(repos, function (index, item) {
 
     $('.repo-list-meta', item).append("<br/><br/>");
     for (var badge_key in badges) {
+
+        if("test" in badges[badge_key]) {
+            var value = $(badges[badge_key]['test']['selector'], item).text();
+
+            if (value != null) {
+                value = value.trim();
+                console.log(value);
+                console.log(badges[badge_key]['test']['is']);
+                console.log(badges[badge_key]['test']['is'].indexOf(value) == -1);
+                if (badges[badge_key]['test']['is'].indexOf(value) == -1) {
+                    continue;
+                }
+            } else {
+                continue;
+            }
+        }
         var url = badges[badge_key]['url'].replace("{repo}", org_link);
         var badge = badges[badge_key]['badge'].replace("{repo}", org_link);
 
