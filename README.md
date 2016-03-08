@@ -3,6 +3,9 @@
 ![image](Assets/octobadges-screenshot.png)
 
 Adds Travis, Coveralls, PyPi (where Language == 'Python'), and License badges to GitHub Organisations items.
+Through adding these badges automatically, we hope to promote better development practices by ensuring your code
+has CI, testing, and clear licensing. If these aren't available, it's easy to see from an organisation repo
+if best practices are being carried out, and if all the code is building correctly and well tested.
 
 ### Installation
 
